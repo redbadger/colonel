@@ -31,7 +31,6 @@ The results coming back are a hash with the following structure
 {
   total: 100 # number of results
   hits: ...
-  facets: ...
 }
 ```
 
