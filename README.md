@@ -2,7 +2,7 @@
 
 Versioned content storage library for ruby.
 
-The Colonel is a versioned document storage library, publishing workflow support and and automatic indexing for querying and search (full-text). It is meant to serve as a backend for applications that store user editable documents in a
+The Colonel is a versioned document storage library, publishing workflow support and automatic indexing for querying and search (full-text). It is meant to serve as a backend for applications that store user editable documents in a
 multi-user environment. (These are usually called Content Management Systems, but the term is too general to just throw around).
 
 Internally, The Colonel uses git for storage and Elasticsearch for search and querying. By default it saves to disk, but it also supports alternative backends.
