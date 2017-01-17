@@ -10,7 +10,7 @@ PATH
   remote: .
   specs:
     colonel (0.6.1)
-      elasticsearch (~> 2.0.0)
+      elasticsearch (~> 1.0.18)
 
 GEM
   remote: https://rubygems.org/
