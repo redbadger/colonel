@@ -9,7 +9,7 @@ module Colonel
   class ElasticsearchResultSet
     include Enumerable
 
-    attr_reader :total
+    attr_reader :total, :aggs
 
     # Internal: Create a new result set
     def initialize(results, document_type)
@@ -18,6 +18,7 @@ module Colonel
       @total  = results["hits"]["total"]
       @max_score = results["hits"]["max_score"]
       @hits   = results["hits"]["hits"]
+      @aggs = results["aggregations"]
     end
 
     # Public: Iterate over raw results
