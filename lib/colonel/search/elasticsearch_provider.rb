@@ -142,6 +142,8 @@ module Colonel
       # Public: Initialize search index for all Document subclasses. Creates an index for each
       # class respecting the type, index name and attributes mapping specified by each class
       def initialize!
+        es_version = es_client.info['version']['number']
+
         # for all specified classes
         DocumentType.all.each do |type_name, type|
           sp = type.search_provider
@@ -149,7 +151,7 @@ module Colonel
 
           # ensure index existence and update mapping
           ensure_index!(sp.index_name, sp.type_name, sp.revision_type_name, sp.item_mapping, sp.revision_mapping, sp.scopes)
-          put_mapping!(sp.index_name, sp.type_name, sp.revision_type_name, sp.item_mapping, sp.revision_mapping, sp.scopes)
+          put_mapping!(sp.index_name, sp.type_name, sp.revision_type_name, sp.item_mapping, sp.revision_mapping, sp.scopes) if es_version =~ /2\.\d\.\d/
         end
       end
 
