@@ -14,7 +14,7 @@ module Colonel
         documents.each do |document|
           cmds = document_commands(document, index_name)
 
-          ElasticsearchProvider.es_client.bulk body: cmds
+          cmds.each { |cmd| ElasticsearchProvider.es_client.bulk body: [cmd] }
         end
       end
 
