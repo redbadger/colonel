@@ -10,7 +10,7 @@ PATH
   remote: .
   specs:
     colonel (0.6.1)
-      elasticsearch (~> 1.0.18)
+      elasticsearch (~> 2.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -31,12 +31,12 @@ GEM
       multi_test (>= 0.1.1)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    elasticsearch (1.0.18)
-      elasticsearch-api (= 1.0.18)
-      elasticsearch-transport (= 1.0.18)
-    elasticsearch-api (1.0.18)
+    elasticsearch (2.0.0)
+      elasticsearch-api (= 2.0.0)
+      elasticsearch-transport (= 2.0.0)
+    elasticsearch-api (2.0.0)
       multi_json
-    elasticsearch-transport (1.0.18)
+    elasticsearch-transport (2.0.0)
       faraday
       multi_json
     faraday (0.11.0)
