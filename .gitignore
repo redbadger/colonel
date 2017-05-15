@@ -21,3 +21,4 @@ tmp
 /storage
 /test-storage
 backup.col
+Gemfile.lock
